@@ -2,7 +2,7 @@
 
 namespace KimberlyHart
 {
-    class Program
+    class Party
     {
         static void Main(string[] args)
         {
