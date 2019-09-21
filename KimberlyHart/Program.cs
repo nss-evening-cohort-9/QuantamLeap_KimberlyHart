@@ -15,12 +15,12 @@ namespace KimberlyHart
             // re-naming the Leaper.Name or Leaper.Wallet
             // Anything in CreateHosts.cs // Host.cs // NameYear.cs is fragile.
             // Tried to give a decent example of what I put together here.
-            // wallet/costs aren't completely functional right now, but you need > then cost per day * number of days
-            var myLeaper = new Leaper("Keith", 500);
+            // wallet/costs aren't completely functional right now, but you need > then cost per day * number of day
+            var myLeaper = new Leaper("Sam Beckett", 1979);
             var name = myLeaper.Name;
             var wallet = myLeaper.Wallet;
             var hostList = new CreateHosts();
-            var year = 1999;
+            var year = 1979;
 
             Console.WriteLine($"NAME: {name}");
             Console.WriteLine($"YOUR YEAR {year}");
@@ -37,8 +37,24 @@ namespace KimberlyHart
             Console.WriteLine("ENTER THE AMOUNT OF DAYS TO STAY");
             var daysResp = Convert.ToInt32(Console.ReadLine());
 
-            // void // Changes actual host // This is what we should use to jump to a host
+            var eventDescriptions = new EventList();
+
+            eventDescriptions.PrintNames();
+
+            Console.WriteLine($"Which event would like to jump into?");
+            var response = Console.ReadLine();
+
+            var selectedEvent = eventDescriptions.GetEvent(int.Parse(response));
+
+            Console.WriteLine($"You selected {selectedEvent.Name}");
+
+
+
+
+            //// void // Changes actual host // This is what we should use to jump to a host
             hostList.JumpToHost(year, wallet, daysResp, resp, myLeaper);
+
+
         }
     }
 }
