@@ -5,7 +5,7 @@ using KimberlyHart.Classes.Hosts;
 
 namespace KimberlyHart.Classes.Events
 {
-    class Event
+    public class Event
     {
         public string Name { get; set; }
         public int Year { get; set; }

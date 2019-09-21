@@ -5,7 +5,7 @@ using KimberlyHart.Classes.Leapers;
 
 namespace KimberlyHart.Classes.Hosts
 {
-    class Host
+    public class Host
     {
         public string Name { get; set; }
         public int Year { get; set; }
