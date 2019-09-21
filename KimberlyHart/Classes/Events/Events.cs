@@ -4,7 +4,8 @@ using System.Text;
 
 namespace KimberlyHart.Classes.Events
 {
-    class Events
+    public class Events
     {
+        public string Year { set; get; }
     }
 }

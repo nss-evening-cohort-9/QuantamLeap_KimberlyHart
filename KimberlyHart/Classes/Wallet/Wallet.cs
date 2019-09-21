@@ -4,7 +4,7 @@ using System.Text;
 
 namespace KimberlyHart.Classes.Wallet
 {
-    class Wallet
+    public class Wallet
     {
     }
 }
