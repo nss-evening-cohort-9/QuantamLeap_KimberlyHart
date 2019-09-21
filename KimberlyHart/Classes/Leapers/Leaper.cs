@@ -14,7 +14,7 @@ namespace KimberlyHart.Classes.Leapers
         public int Wallet { get; set; }
         public Host HostUsing { get; set; }
 
-        //public List<Event> PastEvents = new List<Event>();
+        // public List<Event> PastEvents = new List<Event>();
         public List<Host> PastHosts = new List<Host>();
 
         public Leaper(string name, int budget)
@@ -29,5 +29,6 @@ namespace KimberlyHart.Classes.Leapers
             Console.WriteLine($"{hostToShare.Name} added to HostList in Leaper");
         }
     }
-
 }
+
+
