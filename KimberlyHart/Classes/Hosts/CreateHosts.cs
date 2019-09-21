@@ -81,6 +81,7 @@ namespace KimberlyHart.Classes.Hosts
                 }
                 if (cashOnHand >= price && host.MyId == id)
                 {
+                    leaper.GetHostInfo(host);
                     selectedHost.BeingUsed = true;
                     selectedHost.UsedBy = leaper;
                     selectedHost.PastUsers.Add(leaper);
