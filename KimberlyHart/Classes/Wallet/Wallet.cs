@@ -6,5 +6,6 @@ namespace KimberlyHart.Classes.Wallet
 {
     public class Wallet
     {
+
     }
 }
