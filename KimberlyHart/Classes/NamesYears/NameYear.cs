@@ -234,11 +234,12 @@ namespace KimberlyHart.Classes.NamesYears
 
 
 
-        public NameYear()
+        public NameYear(int startYear)
         {
             var randomGen = new Random();
-            var StartYear = 1900;
-            var EndYear = 2000;
+            var StartYear = startYear;
+            int endYear = startYear + 100;
+            var EndYear = endYear;
             for(var i = StartYear; i <= EndYear; i+= 1)
             {
                 YearList.Add(i);
