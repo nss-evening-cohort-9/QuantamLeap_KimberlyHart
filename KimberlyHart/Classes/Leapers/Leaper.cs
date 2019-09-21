@@ -23,18 +23,10 @@ namespace KimberlyHart.Classes.Leapers
             Wallet = budget;
         }
 
-        //public void Jump(Host whatHost, Event whatEvent)
-        //{
-        // if (whatHost.Year == whatEvent.Year)
-        // {
-        // Console.WriteLine($"{Name} You are Jumping into {whatHost.Name}, The year is {whatEvent.Year}");
-        // var budgetCheck = new Wallet.Wallet(this, whatEvent.Year).CheckMoneyToJump(5);
-
-        //}
         public void GetHostInfo(Host hostToShare)
         {
             PastHosts.Add(hostToShare);
-            Console.WriteLine($"{ hostToShare.Name} added to HostList in Leaper");
+            Console.WriteLine($"{hostToShare.Name} added to HostList in Leaper");
         }
     }
 }

@@ -11,23 +11,15 @@ namespace KimberlyHart
     {
         static void Main(string[] args)
         {
-            // Stuff I did with leaper was just to test Only thing that should break anything in right now is..
-            // re-naming the Leaper.Name or Leaper.Wallet
-            // Anything in CreateHosts.cs // Host.cs // NameYear.cs is fragile.
-            // Tried to give a decent example of what I put together here.
-            // wallet/costs aren't completely functional right now, but you need > then cost per day * number of day
-            var myLeaper = new Leaper("Sam Beckett", 1979);
+            var story = new Story();
+            story.GetIntro();
+            var hostList = new CreateHosts(story.YearBorn, story.CurrentYear);
+            var myLeaper = new Leaper(story.Name, 100);
             var name = myLeaper.Name;
             var wallet = myLeaper.Wallet;
-            var hostList = new CreateHosts();
-            var year = 1979;
+            var year = story.YearBorn;
 
-            Console.WriteLine($"NAME: {name}");
-            Console.WriteLine($"YOUR YEAR {year}");
-            Console.WriteLine($"YOUR WALLET {wallet}");
-
-            // list // year + wallet conditional
-            var getAllJumpable = hostList.GetAllJumpableHosts(year, wallet);
+            var getAllJumpable = hostList.GetAllJumpableHosts(story.YearBorn, wallet);
             Console.WriteLine($"HOSTS IN YOUR YEAR THAT YOU CAN AFFORD TO JUMP TO");
             hostList.DisplayMenu(getAllJumpable);
 
@@ -49,9 +41,6 @@ namespace KimberlyHart
             Console.WriteLine($"You selected {selectedEvent.Name}");
 
 
-
-
-            //// void // Changes actual host // This is what we should use to jump to a host
             hostList.JumpToHost(year, wallet, daysResp, resp, myLeaper);
 
 
