@@ -19,9 +19,6 @@ namespace KimberlyHart
             var wallet = myLeaper.Wallet;
             var year = story.YearBorn;
 
-
-
-            // list // year + wallet conditional
             var getAllJumpable = hostList.GetAllJumpableHosts(story.YearBorn, wallet);
             Console.WriteLine($"HOSTS IN YOUR YEAR THAT YOU CAN AFFORD TO JUMP TO");
             hostList.DisplayMenu(getAllJumpable);
@@ -32,8 +29,21 @@ namespace KimberlyHart
             Console.WriteLine("ENTER THE AMOUNT OF DAYS TO STAY");
             var daysResp = Convert.ToInt32(Console.ReadLine());
 
-            // void // Changes actual host // This is what we should use to jump to a host
+            var eventDescriptions = new EventList();
+
+            eventDescriptions.PrintNames();
+
+            Console.WriteLine($"Which event would like to jump into?");
+            var response = Console.ReadLine();
+
+            var selectedEvent = eventDescriptions.GetEvent(int.Parse(response));
+
+            Console.WriteLine($"You selected {selectedEvent.Name}");
+
+
             hostList.JumpToHost(year, wallet, daysResp, resp, myLeaper);
+
+
         }
     }
 }
