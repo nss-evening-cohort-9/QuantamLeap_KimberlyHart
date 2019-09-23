@@ -19,11 +19,21 @@ namespace KimberlyHart.Classes.Hosts
     {
         public List<Host> HostList = new List<Host>();
         public int YearOfEvent { get; set; }
+        public int YearBorn { get; set; }
+        public int CurrentYear { get; set; }
 
-        public CreateHosts()
+        public CreateHosts(int yearBorn, int currentYear)
         {
+            CurrentYear = currentYear;
+            YearBorn = yearBorn;
+
+
             var randomNum = new Random();
-            var hosts = new NameYear().NamesWithYears;
+
+
+            var hosts = new NameYear(yearBorn).NamesWithYears;
+
+
             foreach(var host in hosts)
             {
                 var age = randomNum.Next(18, 80);
