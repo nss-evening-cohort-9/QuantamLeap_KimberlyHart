@@ -25,5 +25,10 @@ namespace KimberlyHart.Classes.Events
             Reward = reward;
             IsPutRight = false;
         }
+
+        public void Complete()
+        {
+            IsPutRight = true;
+        }
     }
 }

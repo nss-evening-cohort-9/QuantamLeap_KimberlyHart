@@ -42,12 +42,17 @@ namespace KimberlyHart.Classes.Events
                 Console.WriteLine("*****************");
                 Console.WriteLine($"{number++}. {singleEvent.Name} {singleEvent.Location} happens in the year {singleEvent.Year} and it costs ${singleEvent.CostToLeap} to leap. The reward for setting this event right is ${singleEvent.Reward}!");
             }
-          
+
         }
 
         public Event GetEvent(int index)
         {
             return AllEvents[index - 1];
+        }
+
+        public void Remove(Event eventToRemove)
+        {
+            AllEvents.Remove(eventToRemove);
         }
     }
 }
